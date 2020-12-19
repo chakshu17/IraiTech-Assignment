@@ -1,0 +1,57 @@
+<div
+  style="
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  "
+>
+  <div
+    style="
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    "
+  >
+    <section>
+      <app-second-component [data]="value"></app-second-component>
+    </section>
+    <section>
+      <app-third-component [data]="value"></app-third-component>
+    </section>
+  </div>
+  <div
+    style="
+      height: 150px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <div>
+      <app-first-component (Item)="onSubmit($event)"></app-first-component>
+    </div>
+  </div>
+  <div
+    style="
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    "
+  >
+    <section>
+      <app-fourth-component [data]="value" ></app-fourth-component>
+    </section>
+    <section>
+      <app-fifth-component [data]="value" ></app-fifth-component>
+    </section>
+  </div>
+</div>
