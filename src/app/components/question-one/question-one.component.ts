@@ -14,6 +14,12 @@ export class QuestionOneComponent implements OnInit {
   ngOnInit(): void {}
 
   submit(f: NgForm) {
-    this.numberOfIndex = this.list[f.value.number];
+    if (f.value.number === 0) {
+      this.numberOfIndex = 2;
+    } else if (f.value.number % 2 !== 0) {
+      this.numberOfIndex = f.value.number * f.value.number + 1;
+    } else {
+      this.numberOfIndex = f.value.number * f.value.number - 1;
+    }
   }
 }
