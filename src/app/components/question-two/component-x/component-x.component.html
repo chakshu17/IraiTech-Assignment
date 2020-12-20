@@ -1,0 +1,14 @@
+<div style="margin: 3%">
+  <button
+    mat-raised-button
+    style="background-color: rgb(230, 82, 82); color: white"
+    (click)="callComponentY()"
+  >
+    +
+  </button>
+
+  <div *ngFor="let n of counterOfY">
+    <app-component-y [yCounter]="counter"></app-component-y>
+  </div>
+</div>
+

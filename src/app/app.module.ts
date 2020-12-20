@@ -17,9 +17,25 @@ import { SecondComponentComponent } from './components/question-four/second-comp
 import { ThirdComponentComponent } from './components/question-four/third-component/third-component.component';
 import { FourthComponentComponent } from './components/question-four/fourth-component/fourth-component.component';
 import { FifthComponentComponent } from './components/question-four/fifth-component/fifth-component.component';
+import { MainBoradQuestionTwoComponent } from './components/question-two/main-borad-question-two/main-borad-question-two.component';
+import { ComponentXComponent } from './components/question-two/component-x/component-x.component';
+import { ComponentYComponent } from './components/question-two/component-y/component-y.component';
 
 @NgModule({
-  declarations: [AppComponent, QuestionOneComponent, QuestionThreeComponent, MainBoardComponent, FirstComponentComponent, SecondComponentComponent, ThirdComponentComponent, FourthComponentComponent, FifthComponentComponent],
+  declarations: [
+    AppComponent,
+    QuestionOneComponent,
+    QuestionThreeComponent,
+    MainBoardComponent,
+    FirstComponentComponent,
+    SecondComponentComponent,
+    ThirdComponentComponent,
+    FourthComponentComponent,
+    FifthComponentComponent,
+    MainBoradQuestionTwoComponent,
+    ComponentXComponent,
+    ComponentYComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

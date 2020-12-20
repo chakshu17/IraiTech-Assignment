@@ -1,0 +1,22 @@
+<div class="mainComponent">
+  <button mat-raised-button color="primary" (click)="counterOfX()">
+    Add Component X
+  </button>
+
+  <div *ngFor="let n of counterArray; let i = index">
+    <app-component-x [counter]="i"></app-component-x>
+  </div>
+
+
+  <div style="margin-top: 10%;" >
+    <button mat-raised-button color="primary" (click)="showData()">
+      Show JSON DATA
+    </button>
+
+    <p *ngIf="showData" >
+      {{ JsonData | json }}
+    </p>
+  </div>
+</div>
+
+
