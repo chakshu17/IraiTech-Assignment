@@ -13,19 +13,13 @@ export class ComponentServiceService {
         value: [],
       });
     }
-    console.log('X Component');
-
-    console.log(this.componentArray);
   }
 
   getY(index, data) {
     this.componentArray[index].value.push(data);
-    console.log('Y Component');
-
-    console.log(this.componentArray);
   }
 
-  returnArray(){
+  returnArray() {
     return this.componentArray;
   }
 }

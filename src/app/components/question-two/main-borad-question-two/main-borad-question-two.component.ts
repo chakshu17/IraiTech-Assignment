@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VirtualTimeScheduler } from 'rxjs';
 import { ComponentServiceService } from '../../../services/component-service.service';
 
 @Component({
@@ -10,8 +9,6 @@ import { ComponentServiceService } from '../../../services/component-service.ser
 export class MainBoradQuestionTwoComponent implements OnInit {
   constructor(private counterService: ComponentServiceService) {}
 
-  // Data = {};
-  // DataArray = [];
   componentName: string;
   counter: number = 0;
   JsonData;
@@ -22,13 +19,6 @@ export class MainBoradQuestionTwoComponent implements OnInit {
     this.counter++;
     this.counterService.getX(this.counter);
     this.counterArray.push('hello');
-    // console.log(this.componentName+'   ');
-
-    // console.log(this.Data);
-
-    // console.log(this.counterArray);
-    // this.Data.x = `X${this.counter}`;
-    // console.log(this.Data);
   }
 
   showData() {
