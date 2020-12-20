@@ -1,5 +1,25 @@
-<div style="margin: 5%">
-  <form
+<div style="margin: 5%; width: 300px; padding: 10px" fxLayout="column">
+  <div>
+    <mat-form-field
+      *ngFor="let n of phoneNumbers.controls; let i = index"
+      fxLayout="column"
+    >
+      <mat-label>Enter Number</mat-label>
+      <!-- <div fxLayout [formGroupName]="i"> -->
+      <input matInput type="number" [formControl]="phoneNumbers.controls[i]" />
+      <mat-icon *ngIf="i > 0" (click)="delete(i)">delete</mat-icon>
+      <!-- </div> -->
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" type="button" (click)="addNumber()">
+    Add Number
+  </button>
+  <br />
+  <button mat-raised-button color="primary" type="button" (click)="submit()">
+    Submit
+  </button>
+
+  <!-- <form
     [formGroup]="userForm"
     (ngSubmit)="submit()"
     fxLayout="column"
@@ -7,22 +27,21 @@
   >
     <mat-form-field>
       <mat-label>Enter Number</mat-label>
-      <input matInput type="number" formControlName="phoneNumber" />
-    </mat-form-field>
-    <button mat-raised-button color="primary" type="button" (click)="addNumber()">
-      Add Number
-    </button>
-
-    <mat-form-field
-      *ngFor="let n of userForm.get('extraNumbers').controls; let i = index"
-    >
-      <mat-label>Enter Number</mat-label>
-      <div fxLayout>
-        <input matInput type="number" [formControlName]="i" ()="addData($event)" />
-        <mat-icon (click)="delete(i)">delete</mat-icon>
-      </div>
+      <input matInput type="number" formControlName="phoneNumbers" />
     </mat-form-field>
 
-    <button mat-raised-button color="primary" >Submit</button>
-  </form>
+    <div formArrayName="phoneNumbers">
+      <mat-form-field *ngFor="let n of getNumbers().controls; let i = index">
+        <mat-label>Enter Number</mat-label>
+        <div fxLayout [formGroupName]="i">
+          <input matInput type="number" formControlName="PhoneNumber" />
+          <mat-icon (click)="delete(i)">delete</mat-icon>
+        </div>
+      </mat-form-field>
+    </div>
+
+
+
+    <button mat-raised-button color="primary">Submit</button>
+  </form> -->
 </div>
