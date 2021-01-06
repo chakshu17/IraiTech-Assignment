@@ -8,7 +8,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class QuestionThreeComponent implements OnInit {
   userForm: FormGroup;
-
+  expenseForm:FormGroup;
   constructor(private fb: FormBuilder) {
     // this.userForm = this.fb.group({
     //   phoneNumbers: this.fb.array([]),
@@ -17,7 +17,16 @@ export class QuestionThreeComponent implements OnInit {
 
   phoneNumbers = new FormArray([]);
 
-  ngOnInit(): void {;
+
+  ngOnInit(): void {
+	this.expenseForm = this.fb.group({
+		category: ["fast", ],
+		transport_id: ["101"],
+		asset_id: ["55555"],
+		expense_type: ["Port"],
+		date: ["11/12/2020", ],
+		expense_info: this.fb.array(["addas","dadas"])
+	  });
   }
 
 

@@ -45,3 +45,18 @@
     <button mat-raised-button color="primary">Submit</button>
   </form> -->
 </div>
+
+<div>
+  Button to check controls working or not.
+  <button
+    *ngIf="this.expenseForm.get('expense_info')['controls'].length > 1"
+    type="button"
+  >Alpha</button>
+  <br>
+  <button
+  *ngFor="let item of expenseForm.get('expense_info')['controls']"
+    type="button"
+  >
+    Demon King
+  </button>
+</div>
